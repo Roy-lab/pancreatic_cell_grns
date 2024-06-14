@@ -1,5 +1,5 @@
-MERLIN_on_scVI_corrected_reseq_data/network_visualization/beta/module_3339/subnet_beta_0.8_mod_3339_filtered.txt
-MERLIN_on_scVI_corrected_reseq_data/network_visualization/beta/module_3339/matlab_outputs/cc.KO_ire1_6680_6681_filtered.txt
-MERLIN_on_scVI_corrected_reseq_data/network_visualization/beta/module_3339/matlab_outputs/cc.KO_xbp1_2117_2119_filtered.txt
-MERLIN_on_scVI_corrected_reseq_data/network_visualization/beta/module_3339/matlab_outputs/cc.WT_ire1_6683_filtered.txt
-MERLIN_on_scVI_corrected_reseq_data/network_visualization/beta/module_3339/matlab_outputs/cc.WT_xbp1_2120_2118_filtered.txt
+../subnetwork_beta_0.8_module_3339.txt
+matlab_outputs/cc.KO_Ire1.txt
+matlab_outputs/cc.KO_Xbp1.txt
+matlab_outputs/cc.WT_Ire1.txt
+matlab_outputs/cc.WT_Xbp1.txt
