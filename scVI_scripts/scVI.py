@@ -8,12 +8,12 @@ import pandas as pd
 import os
 
 import scvi
-input_file='input_data/expression_matrix'
+input_file='input_files/expression_matrix'
 anndata = sc.read_csv(input_file,delimiter='\t',dtype='float32')
 
-samplenames='input_data/samplenames.txt'
-batchnames='input_data/batchnames.txt'
-genenames='input_data/genenames.txt'
+samplenames='input_files/samplenames.txt'
+batchnames='input_files/batchnames.txt'
+genenames='input_files/genenames.txt'
 sdata = pd.read_table(samplenames, index_col=0, header=None, names=['samples'], dtype=str)
 bdata = pd.read_table(batchnames, index_col=0, header=None, names=['batch'], dtype=str)
 gdata=pd.read_table(genenames,header=None,names=['genenames'], dtype=str);
