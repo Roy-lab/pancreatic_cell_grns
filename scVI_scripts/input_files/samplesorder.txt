@@ -1,0 +1,7 @@
+WT_xbp1_2120
+WT_xbp1_2118
+KO_xbp1_2119
+KO_xbp1_2117
+WT_ire1_6683
+KO_ire1_6681
+KO_ire1_6680
