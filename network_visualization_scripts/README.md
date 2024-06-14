@@ -2,7 +2,7 @@
 
 **Step1: Generatin adjacency matrices for module specific subnetwork for each sample using convertNet.py script:**
 
-Example run: *convertNet.py input/WT_rep1_expression_matrix.txt input/module1_subnetwork.txt output/adj_WT_rep1_expression_matrix.txt output/WT_rep1_expression_matrix.txt*
+Example run: *convertNet.py expression_matrices/WT_Iep1.txt input/module3339_subnetwork.txt matlab_inputs/adj_WT_Ire1.txt matlab_inputs/WT_Ire1.txt*
 
 **Step2: Running matlab script runls_beta.m and runcc_beta.m to calculate regression and correlation coeefficient using outputs in step1:**
 
@@ -19,19 +19,19 @@ This script takes 7 imput files:
 
 Example run:
 
-*python makeCyto2.py reg_files.txt  input/cc_files.txt input/zeromean_expression_files.txt input/deg.txt input/module.txt input/condition_names.txt cytoscape_inputs/in; done*
+*python makeCyto2.py matlab_outputs/reg_files.txt  matlab_outputs/cc_files.txt expression_matrices/zeromean_expression_files.txt matlab_outputs/deg.txt matlab_outputs/module.txt condition_names.txt cytoscape_inputs/in; done*
 
 Example output per sample:
 
-**in_KO_Ire1_rep1_cc.txt:** edges and correlation coefficient 
+**in_WT_Ire1_cc.txt:** edges and correlation coefficient 
 
-**in_KO_Ire1_rep1_reg.txt:** edges and correlation coefficient 
+**in_WT_Ire1_reg.txt:** edges and correlation coefficient 
 
-**in_KO_Ire1_rep1_att.txt:** attribute file which contains columns for gene, its status (eg.TF), weather it is Module gene or not, number of edges it has and mean of zeromean expression
+**in_WT_Ire1_att.txt:** attribute file which contains columns for gene, its status (eg.TF), weather it is Module gene or not, number of edges it has and mean of zeromean expression
 
 **Step4: modifiny att.txt files to change the TF (circle) in column2 to TF2 (diamond) if gene is not an enriched  regulators in module, TAR (rectangle) if it is a module gene and will not change the TF if the gene is an enriched  regulators in module using update_attribute_files.R script**
 
-**Step4: loading files to Cytoscape.** 
+**Step5: loading files to Cytoscape.** 
 
 Cytoscape version 3.10.2 
 
