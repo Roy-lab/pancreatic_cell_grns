@@ -8,12 +8,12 @@ import pandas as pd
 import os
 
 import scvi
-input_file='/mnt/dv/wid/projects5/Roy-singlecell/ke_work/engin_lab/resequenced_data/scVI_application/input_data/resequenced_monocle3_normalized_matrix_nodup_with_genotypes_reordered_noheader_t.txt'
+input_file='input_data/expression_matrix'
 anndata = sc.read_csv(input_file,delimiter='\t',dtype='float32')
 
-samplenames='/mnt/dv/wid/projects5/Roy-singlecell/ke_work/engin_lab/resequenced_data/scVI_application/input_data/samplenames.txt'
-batchnames='/mnt/dv/wid/projects5/Roy-singlecell/ke_work/engin_lab/resequenced_data/scVI_application/input_data/batchnames.txt'
-genenames='/mnt/dv/wid/projects5/Roy-singlecell/ke_work/engin_lab/resequenced_data/scVI_application/input_data/genenames.txt'
+samplenames='input_data/samplenames.txt'
+batchnames='input_data/batchnames.txt'
+genenames='input_data/genenames.txt'
 sdata = pd.read_table(samplenames, index_col=0, header=None, names=['samples'], dtype=str)
 bdata = pd.read_table(batchnames, index_col=0, header=None, names=['batch'], dtype=str)
 gdata=pd.read_table(genenames,header=None,names=['genenames'], dtype=str);
@@ -57,8 +57,8 @@ for resolution in resolutions_to_try:
 
 
 import matplotlib.pyplot as plt
-os.mkdir("/mnt/dv/wid/projects5/Roy-singlecell/ke_work/engin_lab/resequenced_data/scVI_application/results2")
-os.chdir("/mnt/dv/wid/projects5/Roy-singlecell/ke_work/engin_lab/resequenced_data/scVI_application/results2")
+os.mkdir("output")
+os.chdir("output")
 from scvi.model.utils import mde
 import pymde
 anndata.obsm["X_mde"] = mde(anndata.obsm["X_scVI"])
@@ -77,13 +77,8 @@ import numpy as np
 #anndata.obsm["normcounts_scaled"] = vae.get_normalized_expression(library_size=100000)
 ##New, based on KE's query
 anndata.obsm["normcounts_corrected_scaled"] = vae.get_normalized_expression(transform_batch=['ire1','xbp1'],library_size=100000,n_samples=7)
-anndata.obsm["normcounts_corrected_scaled_10k"] = vae.get_normalized_expression(transform_batch=['ire1','xbp1'],library_size=10000,n_samples=7)
-anndata.obsm["normcounts_corrected_scaled_1k"] = vae.get_normalized_expression(transform_batch=['ire1','xbp1'],library_size=1000,n_samples=7)
-##Unfortunately anndata could not be saved with such a big matrix.
 np.savetxt("resequenced_scVI_mde_coord.txt",anndata.obsm["X_mde"],delimiter="\t");
 #np.savetxt("scRNAseqalone_and_scRNAseq_MO_D3_scvi_normalized_batch.txt",anndata.obsm["normcounts"],delimiter="\t")
 #np.savetxt("scRNAseqalone_and_scRNAseq_MO_D3_scvi_normalized_scaled_batch.txt",anndata.obsm["normcounts_scaled"],delimiter="\t")
 np.savetxt("resequenced_scVI_normalized_corrected_scaled_batch_t.txt",anndata.obsm["normcounts_corrected_scaled"],delimiter="\t")
-np.savetxt("resequenced_scVI_normalized_corrected_scaled_10K_batch_t.txt",anndata.obsm["normcounts_corrected_scaled_10K"],delimiter="\t")
-np.savetxt("resequenced_scVI_normalized_corrected_scaled_1K_batch_t.txt",anndata.obsm["normcounts_corrected_scaled_1K"],delimiter="\t")
 
