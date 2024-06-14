@@ -1,89 +1,51 @@
-network import file firstRowAsColumnNames=true startLoadRow=1 delimiters="\\t" indexColumnSourceInteraction=1 indexColumnTargetInteraction=2 file=//Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_conf.txt
+network import file firstRowAsColumnNames=true startLoadRow=1 delimiters="\\t" indexColumnSourceInteraction=1 indexColumnTargetInteraction=2 file=cytoscape_inputs/in_conf.txt
 
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_ire1_6680_6681_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_ire1_6680_6681_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
+table import file delimiters="\t" file=cytoscape_inputs/in_KO_Ire1_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
+table import file delimiters="\t" file=cytoscape_inputs/in_KO_Ire1_att.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
 command sleep duration=2
 view fit content
 command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/KO_ire1_6680_6681_reg.pdf view=CURRENT
+view export options=PDF OutputFile=cytoscape_outputs/KO_Ire1_reg.pdf view=CURRENT
 command sleep duration=2
-session save as file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/in_KO_ire1_6680_6681_reg.cys
-command sleep duration=2
-
-
-
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_ire1_6680_6681_cc.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_ire1_6680_6681_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
-command sleep duration=2
-view fit content
-command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/KO_ire1_6680_6681_cc.pdf view=CURRENT
+session save as file=cytoscape_outputs/in_KO_ire1_reg.cys
 command sleep duration=2
 
 
 
-
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_xbp1_2117_2119_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_xbp1_2117_2119_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
+table import file delimiters="\t" file=cytoscape_inputs/in_WT_Ire1_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
+table import file delimiters="\t" file=cytoscape_inputs/in_WT_Ire1_att.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
 command sleep duration=2
 view fit content
 command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/KO_xbp1_2117_2119_reg.pdf view=CURRENT
+view export options=PDF OutputFile=cytoscape_outputs/WT_Ire1_reg.pdf view=CURRENT
+command sleep duration=2
+session save as file=cytoscape_outputs/in_WT_ire1_reg.cys
 command sleep duration=2
 
 
 
 
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_xbp1_2117_2119_cc.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_KO_xbp1_2117_2119_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
-command sleep duration=2
-view fit content
-command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/KO_xbp1_2117_2119_cc.pdf view=CURRENT
-command sleep duration=2
-
-
-
-
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_ire1_6683_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_ire1_6683_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
+table import file delimiters="\t" file=cytoscape_inputs/in_KO_Xbp1_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
+table import file delimiters="\t" file=cytoscape_inputs/in_KO_Xbp1_att.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
 command sleep duration=2
 view fit content
 command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/WT_ire1_6683_reg.pdf view=CURRENT
+view export options=PDF OutputFile=cytoscape_outputs/KO_Xbp1_reg.pdf view=CURRENT
+command sleep duration=2
+session save as file=cytoscape_outputs/in_KO_Xbp1_reg.cys
 command sleep duration=2
 
 
 
 
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_ire1_6683_cc.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_ire1_6683_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
-command sleep duration=2
-view fit content
-command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/WT_ire1_6683_cc.pdf view=CURRENT
-command sleep duration=2
-
-
-
-
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_xbp1_2120_2118_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_xbp1_2120_2118_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
+table import file delimiters="\t" file=cytoscape_inputs/in_WT_Xbp1_reg.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
+table import file delimiters="\t" file=cytoscape_inputs/in_WT_Xbp1_att.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
 command sleep duration=2
 view fit content
 command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/WT_xbp1_2120_2118_reg.pdf view=CURRENT
+view export options=PDF OutputFile=cytoscape_outputs/WT_Xbp1_reg.pdf view=CURRENT
 command sleep duration=2
-
-
-
-
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_xbp1_2120_2118_cc.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1 DataTypeTargetForNetworkCollection="Edge Table Columns"
-table import file delimiters="\t" file=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_inputs_v3/in_WT_xbp1_2120_2118_attzeromean.txt firstRowAsColumnNames=true keyColumnIndex=1 startLoadRow=1
-command sleep duration=2
-view fit content
-command sleep duration=2
-view export options=PDF OutputFile=/Users/keynullazada/Documents/engin_lab/reseq_data/network_visualization/beta/module_3339/cytoscape_outputs_v3/WT_xbp1_2120_2118_cc.pdf view=CURRENT
+session save as file=cytoscape_outputs/in_WT_Xbp1_reg.cys
 command sleep duration=2
 
 
