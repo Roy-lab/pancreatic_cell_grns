@@ -20,3 +20,28 @@ This script takes 7 imput files:
 Example run:
 
 *python makeCyto2.py reg_files.txt  input/cc_files.txt input/zeromean_expression_files.txt input/deg.txt input/module.txt input/condition_names.txt cytoscape_inputs/in; done*
+
+Example output per sample:
+
+**in_KO_Ire1_rep1_cc.txt:** edges and correlation coefficient 
+
+**in_KO_Ire1_rep1_reg.txt:** edges and correlation coefficient 
+
+**in_KO_Ire1_rep1_att.txt:** attribute file which contains columns for gene, its status (eg.TF), weather it is Module gene or not, number of edges it has and mean of zeromean expression
+
+**Step4: modifiny att.txt files to change the TF (circle) in column2 to TF2 (diamond) if gene is not an enriched  regulators in module, TAR (rectangle) if it is a module gene and will not change the TF if the gene is an enriched  regulators in module using update_attribute_files.R script**
+
+**Step4: loading files to Cytoscape.** 
+
+Cytoscape version 3.10.2 
+
+First you have to load the cytoscape_inputs/**xml file to the cytoscape which contain the certain beautificaitons like edge colors red, thin, node colors rectangle for module genes, circle for enriched TFs and diamond for non-enriched TFs etc.
+
+To load it form cytoscape app go: File -> import -> styles from file
+Loaded input files to Cyoscape using cytoscape executive files: 
+
+To load the executive files from the app select : Tools -> Execute command files.
+Note: Each time before loading the executive for new module you have to adjust the min-max node size from the app setting it to minimum and maximum number of edges for nodes in the module specific subnetwork.
+
+
+
