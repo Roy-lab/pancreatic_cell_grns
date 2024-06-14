@@ -2,7 +2,7 @@
 
 **Step1: Generatin adjacency matrices for module specific subnetwork for each sample using convertNet.py script:**
 
-Example run: *convertNet.py expression_matrices/WT_Iep1.txt input/module3339_subnetwork.txt matlab_inputs/adj_WT_Ire1.txt matlab_inputs/WT_Ire1.txt*
+Example run: *convertNet.py expression_matrices/WT_Iep1.txt module3339_subnetwork.txt matlab_inputs/adj_WT_Ire1.txt matlab_inputs/WT_Ire1.txt*
 
 **Step2: Running matlab script runls_beta.m and runcc_beta.m to calculate regression and correlation coeefficient using outputs in step1:**
 
@@ -35,7 +35,7 @@ Example output per sample:
 
 Cytoscape version 3.10.2 
 
-First you have to load the cytoscape_inputs/**xml file to the cytoscape which contain the certain beautificaitons like edge colors red, thin, node colors rectangle for module genes, circle for enriched TFs and diamond for non-enriched TFs etc.
+First you have to load the cytoscape_inputs/network_vizualisation.xml file to the cytoscape which contain the certain beautificaitons like edge colors red, thin, node colors rectangle for module genes, circle for enriched TFs and diamond for non-enriched TFs etc.
 
 To load it form cytoscape app go: File -> import -> styles from file
 Loaded input files to Cyoscape using cytoscape executive files: 
