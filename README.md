@@ -7,8 +7,8 @@ script:network_visualization_scripts/convertNet.py
 Example run: convertNet.py expression_matrices/WT_Iep1.txt module3339_subnetwork.txt matlab_inputs/adj_WT_Ire1.txt matlab_inputs/WT_Ire1.txt
 
 # Step2: Calculate regression and correlation coeefficient using outputs in step1 with following matlab scripts:
-network_visualization_scripts/runls_beta.m 
-network_visualization_scripts/runcc_beta.m 
+network_visualization_scripts/runls_beta.m  #for regression coefficients
+network_visualization_scripts/runcc_beta.m  #for correlation coefficients
 
 # Step3: Generating input files for Cytoscape:
 script: network_visualization_scripts/makeCyto2.py
