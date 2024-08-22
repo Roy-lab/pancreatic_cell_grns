@@ -1,23 +1,23 @@
-## scVI was applied to the data using the following scrtip:
+# scVI was applied to the data using the following scrtip:
 scVI_scripts/scVI.py
 
 Example input files are shown in scVI_scripts/input_files folder
 
-## For application of MERLIN for Gene Regulator Network (GRN) Inference and downstream visualization refer to this github page: https://github.com/Roy-lab/merlin-p
-## For visualization of GRNs follow the steps:
+# For application of MERLIN for Gene Regulator Network (GRN) Inference and downstream visualization refer to this github page: https://github.com/Roy-lab/merlin-p
+# For visualization of GRNs follow the steps:
 Steps of generating module specific network files
 
-# Step1: Generatin adjacency matrices for module specific subnetwork for each sample
+## Step1: Generatin adjacency matrices for module specific subnetwork for each sample
 script:network_visualization_scripts/convertNet.py
 
 Example run: convertNet.py expression_matrices/WT_Iep1.txt module3339_subnetwork.txt matlab_inputs/adj_WT_Ire1.txt matlab_inputs/WT_Ire1.txt
 
-# Step2: Calculate regression and correlation coeefficient using outputs in step1 with following matlab scripts:
+## Step2: Calculate regression and correlation coeefficient using outputs in step1 with following matlab scripts:
 network_visualization_scripts/runls_beta.m  #for regression coefficients
 
 network_visualization_scripts/runcc_beta.m  #for correlation coefficients
 
-# Step3: Generating input files for Cytoscape:
+## Step3: Generating input files for Cytoscape:
 script: network_visualization_scripts/makeCyto2.py
 
 This script takes 7 imput files:
@@ -44,10 +44,10 @@ in_WT_Ire1_cc.txt: edges and correlation coefficient
 in_WT_Ire1_reg.txt: edges and correlation coefficient
 in_WT_Ire1_att.txt: attribute file which contains columns for gene, its status (eg.TF), weather it is Module gene or not, number of edges it has and mean of zeromean expression
 
-# Step4: 
+## Step4: 
 Note: modifiny att.txt files to change the TF (circle) in column2 to TF2 (diamond) if gene is not an enriched regulators in module, TAR (rectangle) if it is a module gene and will notchange the TF if the gene is an enriched regulators in module using update_attribute_files.R script
 
-# Step5: loading files to Cytoscape.
+## Step5: loading files to Cytoscape.
 Cytoscape version 3.10.2
 First you have to load the cytoscape_inputs/network_vizualisation.xml file to the cytoscape which contain the certain beautificaitons like edge colors red, thin, node colors rectangle for module genes, circle for enriched TFs and diamond for non-enriched TFs etc.
 
