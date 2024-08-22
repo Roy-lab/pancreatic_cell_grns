@@ -2,13 +2,16 @@
  ## For visualization of GRNs follow the steps:
 Steps of generating module specific network files
 
-# Step1: Generatin adjacency matrices for module specific subnetwork for each sample using convertNet.py script:
-
+# Step1: Generatin adjacency matrices for module specific subnetwork for each sample using convertNet.py 
+script:network_visualization_scripts/convertNet.py
 Example run: convertNet.py expression_matrices/WT_Iep1.txt module3339_subnetwork.txt matlab_inputs/adj_WT_Ire1.txt matlab_inputs/WT_Ire1.txt
 
-# Step2: Running matlab script runls_beta.m and runcc_beta.m to calculate regression and correlation coeefficient using outputs in step1:
+# Step2: Calculate regression and correlation coeefficient using outputs in step1 with following matlab scripts:
+network_visualization_scripts/runls_beta.m 
+network_visualization_scripts/runcc_beta.m 
 
-# Step3: Generating input files for Cytoscape using makeCyto2.py script.
+# Step3: Generating input files for Cytoscape:
+script: network_visualization_scripts/makeCyto2.py
 
 This script takes 7 imput files:
 
@@ -28,10 +31,10 @@ in_WT_Ire1_cc.txt: edges and correlation coefficient
 in_WT_Ire1_reg.txt: edges and correlation coefficient
 in_WT_Ire1_att.txt: attribute file which contains columns for gene, its status (eg.TF), weather it is Module gene or not, number of edges it has and mean of zeromean expression
 
-# Step4: modifiny att.txt files to change the TF (circle) in column2 to TF2 (diamond) if gene is not an enriched regulators in module, TAR (rectangle) if it is a module gene and will not change the TF if the gene is an enriched regulators in module using update_attribute_files.R script
+# Step4: 
+Note: modifiny att.txt files to change the TF (circle) in column2 to TF2 (diamond) if gene is not an enriched regulators in module, TAR (rectangle) if it is a module gene and will notchange the TF if the gene is an enriched regulators in module using update_attribute_files.R script
 
 # Step5: loading files to Cytoscape.
-
 Cytoscape version 3.10.2
 First you have to load the cytoscape_inputs/network_vizualisation.xml file to the cytoscape which contain the certain beautificaitons like edge colors red, thin, node colors rectangle for module genes, circle for enriched TFs and diamond for non-enriched TFs etc.
 
