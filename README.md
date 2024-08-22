@@ -2,7 +2,7 @@
  ## For visualization of GRNs follow the steps:
 Steps of generating module specific network files
 
-# Step1: Generatin adjacency matrices for module specific subnetwork for each sample using convertNet.py 
+# Step1: Generatin adjacency matrices for module specific subnetwork for each sample
 script:network_visualization_scripts/convertNet.py
 Example run: convertNet.py expression_matrices/WT_Iep1.txt module3339_subnetwork.txt matlab_inputs/adj_WT_Ire1.txt matlab_inputs/WT_Ire1.txt
 
