@@ -1,2 +1,4 @@
-# pancreatic_cell_grns
-Repository for analysis done for XBP1 paper
+# For application of MERLIN for Gene Regulator Network Inference refer to this github page: https://github.com/Roy-lab/merlin-p
+
+
+
