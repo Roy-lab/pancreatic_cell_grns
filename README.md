@@ -18,14 +18,20 @@ script: network_visualization_scripts/makeCyto2.py
 This script takes 7 imput files:
 
 reg_files.txt: a file containing path to all files contains regression coefficient produced in previous step by runls.m script (this should also include path to the module specific subnetwork).
-cc_files.txt: a file containing path to all files containing correlation coefficient produced in previous step by runcc.m script (this should also include path to the module specific subnetwork)
-zeromean_expression_files.txt: a file containing path to all genotype specific files which contain mean expression of zeromean normalized matrix per genotype.
-deg.txt: two column file showing all the genes in module specific subnetwork as first column and number of outgoing edges they have in subnetwork as second columns
-module.txt: two column file showing all the genes in module specific subnetwork as first column and module number in second column
-condition_names.txt:a file containing name of the cell types/conditions
-in: output files prefix
-Example run:
 
+cc_files.txt: a file containing path to all files containing correlation coefficient produced in previous step by runcc.m script (this should also include path to the module specific subnetwork)
+
+zeromean_expression_files.txt: a file containing path to all genotype specific files which contain mean expression of zeromean normalized matrix per genotype.
+
+deg.txt: two column file showing all the genes in module specific subnetwork as first column and number of outgoing edges they have in subnetwork as second columns
+
+module.txt: two column file showing all the genes in module specific subnetwork as first column and module number in second column
+
+condition_names.txt:a file containing name of the cell types/conditions
+
+in: output files prefix
+
+Example run:
 python makeCyto2.py matlab_outputs/reg_files.txt matlab_outputs/cc_files.txt expression_matrices/zeromean_expression_files.txt matlab_outputs/deg.txt matlab_outputs/module.txt condition_names.txt cytoscape_inputs/in; done
 
 Example output per sample:
