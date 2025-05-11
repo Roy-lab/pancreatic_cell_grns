@@ -1,4 +1,4 @@
-# scVI was applied to the data using the following scrtip:
+# scVI was applied to the data using the following script:
 scVI_scripts/scVI.py
 
 Example input files are shown in scVI_scripts/input_files folder
