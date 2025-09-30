@@ -56,6 +56,6 @@ To load it form cytoscape app go: File -> import -> styles from file Loaded inpu
 To load the executive files from the app select : Tools -> Execute command files. Note: Each time before loading the executive for new module you have to adjust the min-max node size from the app setting it to minimum and maximum number of edges for nodes in the module specific subnetwork.
 
 
-## For citations:
+## For citation:
 Lee H, Eynullazada K, Ou Q, Shin J, Roy S, Engin F. Pancreatic cell GRNs (code repository). GitHub. https://github.com/Roy-lab/pancreatic_cell_grns. Zenodo. https://doi.org/10.5281/zenodo.17229161 (2025).
 
