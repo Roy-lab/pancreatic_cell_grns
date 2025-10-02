@@ -45,7 +45,7 @@ in_WT_Ire1_reg.txt: edges and correlation coefficient
 in_WT_Ire1_att.txt: attribute file which contains columns for gene, its status (eg.TF), weather it is Module gene or not, number of edges it has and mean of zeromean expression
 
 ## Step4: 
-Note: modifiny att.txt files to change the TF (circle) in column2 to TF2 (diamond) if gene is not an enriched regulators in module, TAR (rectangle) if it is a module gene and will notchange the TF if the gene is an enriched regulators in module using update_attribute_files.R script
+Note: modify att.txt files to change the TF (circle) in column2 to TF2 (diamond) if gene is not an enriched regulators in module, TAR (rectangle) if it is a module gene and will notchange the TF if the gene is an enriched regulators in module using update_attribute_files.R script
 
 ## Step5: loading files to Cytoscape.
 Cytoscape version 3.10.2
